@@ -6,7 +6,7 @@
 
 Gets the mean and standard deviation from the given set, after downloading the file, and unzipping it.
 
-**Avg.txt**
+**Res5.txt**
 
 Txt document that gives the average for every piece of information in both the "test" and "train" folders
 
