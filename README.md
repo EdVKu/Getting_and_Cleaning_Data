@@ -87,14 +87,16 @@ extracter <- function(url__){
     Avg[[namme]] <- m1
     s1 <- sd(m[[namesM[i]]],na.rm = T)
     StdDev[[nasme]] <- s1
-  
+  # Here, the average and sd data frames are prepared
   }
   
 if(!file.exists("Avg.txt")){
   write.table(Avg, "Avg.txt")
+  #If a file exists, the write.table does nothing
 }
 if(!file.exists("SD.txt")){
     write.table(StdDev, "SD.txt")
+    #If a file exists, the write.table does nothing
   }
 }
 ```
