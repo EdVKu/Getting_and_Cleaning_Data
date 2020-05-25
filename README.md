@@ -1,6 +1,7 @@
 # Getting_and_Cleaning_Data
 
-## Script used
+## Functions used
+**Merger**
 merger <- function(url){
 
   if(!file.exists("./data")){
