@@ -31,7 +31,7 @@ merger <- function(url){
   }
   
   mergedf <<- merge(traindf,testdf, by.x = "n", by.y = "n", all = T)
-
+  
   return(mergedf)
 }
 
@@ -50,13 +50,13 @@ extracter <- function(url__){
     Avg[[namme]] <- m1
     s1 <- sd(m[[namesM[i]]],na.rm = T)
     StdDev[[nasme]] <- s1
-  
+    
   }
   
-if(!file.exists("Avg.txt")){
-  write.table(Avg, "Avg.txt")
-}
-if(!file.exists("SD.txt")){
+  if(!file.exists("Avg.txt")){
+    write.table(Avg, "Avg.txt")
+  }
+  if(!file.exists("SD.txt")){
     write.table(StdDev, "SD.txt")
   }
 }
