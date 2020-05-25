@@ -94,11 +94,11 @@ merger <- function(url){
     
     actLabels <- read.table(ActPath[1])
     
-    reqdData$activity <- factor(as.factor(reqdData$activity), 
+    mergedf$activity <- factor(as.factor(mergedf$activity), 
                                 levels=actLabels$V1, 
                                 labels=actLabels$V2)
     
-    cols2clean <- names(reqdData)
+    cols2clean <- names(mergedf)
     cols2Clean <- gsub('fBodyBody', 'fBody', cols2Clean)
     cols2Clean <- gsub('^t', 'time\\.', cols2Clean)
     cols2Clean <- gsub('^f', 'freq\\.', cols2Clean)
@@ -121,11 +121,11 @@ merger <- function(url){
     
     cols2Clean <- gsub('-std\\(\\)', '.std', cols2Clean)
     cols2Clean <- gsub('-', '.', cols2Clean)
-    names(reqdData) <- cols2Clean
+    names(mergedf) <- cols2Clean
     
     
     
-    meanBySubAct <- reqdData %>% 
+    meanBySubAct <- mergedf %>% 
       group_by(subject, activity) %>% 
       summarise_all(mean)
     if(!file.exists("Res5.txt")){
