@@ -2,6 +2,10 @@ merger <- function(url){
   if(!any(installed.packages()=="dplyr")){
     install.packages("dplyr", dependencies = T)
   }
+  if(!any(installed.packaged()=="stringr")){
+    install.packages("stringr", dependencies = T)
+    }
+  
   if(!file.exists("./data")){
     
     dir.create("./data")
@@ -10,6 +14,7 @@ merger <- function(url){
     
   }
   library(dplyr)
+  library(stringr)
   
   path <- file.path(getwd(),"data","UCI HAR Dataset","test","Inertial Signals") 
   path2 <- file.path(getwd(),"data","UCI HAR Dataset","train","Inertial Signals") 
