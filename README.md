@@ -2,6 +2,8 @@
 
 ## Functions used
 **Merger**
+
+
 merger <- function(url){
 
   if(!file.exists("./data")){
