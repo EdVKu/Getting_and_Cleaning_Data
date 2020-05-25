@@ -1,0 +1,31 @@
+---
+title: "CodeBook"
+author: "Eduardo V K"
+date: "5/24/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Test folder
+
+## Test-(1-3): Data from the body_acc_(x,y,z)_test
+
+## Test-(4-6): Data from the body_gyro_(x,y,z)_test
+
+## Test-(7-9): Data from the total_acc_(x,y,z)_test
+
+# Train folder
+
+## Train-(1-3): Data from the body_acc_(x,y,z)_train
+
+## Train-(4-6): Data from the body_gyro_(x,y,z)_train
+
+## Train-(7-9): Data from the total_acc_(x,y,z)_train
+
+# Other variables used
+
+## Avg-n: Mean, or average of n
+## Std.Dev-n: Standard deviation of n
