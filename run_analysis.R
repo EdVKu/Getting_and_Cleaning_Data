@@ -88,7 +88,7 @@ merger <- function(url){
     stdVs <- grep('std\\(\\)', feats_, value=TRUE)
     reqdCs <- c(rbind(meanVs, stdVs))
     reqdCs <- c('subject', 'activity', reqdCs)
-    reqdDt <- datacomp[,reqdCs]
+    reqdDt <- mergedf[,reqdCs]
     reqData <- reqdDt
     rm(dataComplete)
     
