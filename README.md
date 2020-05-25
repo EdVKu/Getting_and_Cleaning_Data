@@ -49,7 +49,8 @@ merger <- function(url){
   }
    #The read.table commands had to be unlisted in order to have the full list of data without any column interruptions
   mergedf <<- merge(traindf,testdf, by.x = "n", by.y = "n")
-  #the mergedf becomes a public variable for further usages down the line. It also merges both sets using "n" as identifier
+  #the mergedf becomes a public variable for further usages down the line. It also merges both sets using "n" as identifier. The data frame merges ALL rows, so it will
+  # have the amount of rows of the biggest set.
 }
 
 ```
@@ -87,7 +88,7 @@ extracter <- function(url__){
     Avg[[namme]] <- m1
     s1 <- sd(m[[namesM[i]]],na.rm = T)
     StdDev[[nasme]] <- s1
-  # Here, the average and sd data frames are prepared
+  # Here, the average and sd data frames are prepared. Since there is more data in one type of reading than the other, na.rm is used
   }
   
 if(!file.exists("Avg.txt")){
