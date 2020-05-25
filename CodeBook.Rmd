@@ -29,3 +29,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Avg-n: Mean, or average of n
 ## Std.Dev-n: Standard deviation of n
+## n: The number of readings done for the data set

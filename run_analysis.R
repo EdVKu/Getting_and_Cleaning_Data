@@ -54,10 +54,10 @@ extracter <- function(url__){
   }
   
   if(!file.exists("Avg.txt")){
-    write.table(Avg, "Avg.txt")
+    write.table(Avg, "Avg.txt", row.names = F)
   }
   if(!file.exists("SD.txt")){
-    write.table(StdDev, "SD.txt")
+    write.table(StdDev, "SD.txt", row.names = F)
   }
 }
 
